@@ -22,17 +22,12 @@ class ViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
-
+  
             let navigationHeight = UIApplication.shared.statusBarFrame.height
-                + self.navigationController!.navigationBar.frame.height
+                                          + self.navigationController!.navigationBar.frame.height
+            buttonBarView.frame = CGRect(x: 0, y: navigationHeight ,width: self.view.bounds.width,height: 50)
 
-            //print(navigationHeight)
-            buttonBarView.frame = CGRect(x: 0,
-                                         y: navigationHeight,
-                                         width: self.view.bounds.width,
-                                         height: 50)
-        
-        
+          
     }
     
     
@@ -45,24 +40,34 @@ class ViewController: ButtonBarPagerTabStripViewController {
       return [child_1,child_2]
     }
     
-    
+
     func loadDesign() {
-        
         
         self.settings.style.selectedBarHeight = 1.0
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarItemBackgroundColor = .white
         self.settings.style.selectedBarBackgroundColor = .niceBlue
         self.settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 13)
-        self.settings.style.selectedBarHeight = 10.0
-        self.settings.style.buttonBarMinimumLineSpacing = 0
+        self.settings.style.buttonBarMinimumLineSpacing = 1
         self.settings.style.buttonBarItemTitleColor = .niceBlue
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
-        self.settings.style.buttonBarLeftContentInset = 30
-        self.settings.style.buttonBarRightContentInset = 30
+      //  settings.style.buttonBarLeftContentInset = 200
+      //  settings.style.buttonBarRightContentInset = 30
+      //  settings.style.buttonBarItemLeftRightMargin = 0
         
        
-        containerView.frame = CGRect(x: 0, y: 88, width: 375, height: 768)
+        
+        
+        // iPhone X..
+        if (UIDevice().userInterfaceIdiom == .phone) && (UIScreen.main.nativeBounds.height == 2436) {
+            containerView.frame = CGRect(x: 0, y: buttonBarView.frame.height + 50 , width: 375, height: view.frame.height)
+
+        }
+        // iPhone 8..
+        else {
+            containerView.frame = CGRect(x: 0, y: buttonBarView.frame.height , width: 375, height: view.frame.height)
+
+        }
         
         
         self.changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in

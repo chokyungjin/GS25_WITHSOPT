@@ -84,8 +84,8 @@
 		397E27782381A6D300EA90C0 /* GS25_WITHSOPT */ = {
 			isa = PBXGroup;
 			children = (
-				397E27912381A78B00EA90C0 /* Resources */,
 				397E278D2381A76800EA90C0 /* Sources */,
+				397E27912381A78B00EA90C0 /* Resources */,
 				397E27792381A6D300EA90C0 /* AppDelegate.swift */,
 				397E277B2381A6D300EA90C0 /* SceneDelegate.swift */,
 				397E27872381A6D400EA90C0 /* Info.plist */,

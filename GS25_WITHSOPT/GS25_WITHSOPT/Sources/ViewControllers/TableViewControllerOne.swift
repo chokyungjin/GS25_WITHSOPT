@@ -11,6 +11,10 @@ import XLPagerTabStrip
 
 class TableViewControllerOne: UITableViewController {
 
+    
+    let navigationHeight = UIApplication.shared.statusBarFrame.height
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +22,7 @@ class TableViewControllerOne: UITableViewController {
 
     }
 
+    
     // MARK: - Table view data source
 
 
@@ -27,8 +32,10 @@ class TableViewControllerOne: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        780
+      
+        return self.view.bounds.height - ( navigationHeight + navigationController!.navigationBar.frame.height + (tabBarController?.navigationController?.navigationBar.frame.height)!)
     }
     
 

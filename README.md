@@ -31,9 +31,9 @@
 * ~~네비게이션 타이틀에 이미지 넣기~~
 * ~~상단 탭바~~
 * ~~하단 탭바 구현~~
+* ~~image assets import~~
 * navigation bar button 에 withrenderingmode 
 * 마이페이지 스크롤 뷰 
 * 테이블 셀에 이미지 넣기
 * disclosure Indicator
-* image assets import
 * Extensions...
