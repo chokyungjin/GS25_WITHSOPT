@@ -14,7 +14,8 @@ class TableViewControllerOne: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+    tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+
     }
 
     // MARK: - Table view data source
@@ -26,10 +27,18 @@ class TableViewControllerOne: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        780
+    }
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellOne", for: indexPath) as! TableViewCellOne
+        
+        
+        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -38,6 +47,8 @@ class TableViewControllerOne: UITableViewController {
 extension TableViewControllerOne: IndicatorInfoProvider {
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        
+        
         
         return IndicatorInfo(title: "QR 코드")
     }

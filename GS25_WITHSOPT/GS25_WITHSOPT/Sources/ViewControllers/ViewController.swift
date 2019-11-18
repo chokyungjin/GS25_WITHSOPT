@@ -14,6 +14,8 @@ class ViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadDesign()
+        
+                
         // Do any additional setup after loading the view.
     }
 
@@ -23,12 +25,13 @@ class ViewController: ButtonBarPagerTabStripViewController {
 
             let navigationHeight = UIApplication.shared.statusBarFrame.height
                 + self.navigationController!.navigationBar.frame.height
-        
-        
+
+            //print(navigationHeight)
             buttonBarView.frame = CGRect(x: 0,
-                                         y: 100,
+                                         y: navigationHeight,
                                          width: self.view.bounds.width,
-                                         height: 50.0)
+                                         height: 50)
+        
         
     }
     
@@ -37,7 +40,8 @@ class ViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TableOne")
         let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TableTwo")
-
+        
+        
       return [child_1,child_2]
     }
     
@@ -49,22 +53,22 @@ class ViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarItemBackgroundColor = .white
         self.settings.style.selectedBarBackgroundColor = .niceBlue
-        self.settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 15)
+        self.settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 13)
         self.settings.style.selectedBarHeight = 10.0
-        self.settings.style.buttonBarMinimumLineSpacing = 30
+        self.settings.style.buttonBarMinimumLineSpacing = 0
         self.settings.style.buttonBarItemTitleColor = .niceBlue
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
         self.settings.style.buttonBarLeftContentInset = 30
         self.settings.style.buttonBarRightContentInset = 30
         
+       
+        containerView.frame = CGRect(x: 0, y: 88, width: 375, height: 768)
         
-        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell? , newCell : ButtonBarViewCell? , progressPercentage: CGFloat, changeCurrentIndex: Bool , animated: Bool) -> Void in
+        
+        self.changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             
-            guard changeCurrentIndex == true else {return}
             oldCell?.label.textColor = UIColor.black
-            newCell?.label.textColor = UIColor.black
-            
-            
+            newCell?.label.textColor = .niceBlue
         }
 
     }

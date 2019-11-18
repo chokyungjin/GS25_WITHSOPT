@@ -14,6 +14,7 @@ class TableViewControllerTwo: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
     
     }
 
@@ -27,9 +28,18 @@ class TableViewControllerTwo: UITableViewController {
         return 1
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        780
+    }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellTwo", for: indexPath) as! TableViewCellTwo
+        
+        
+        cell.selectionStyle = .none
+
         return cell
     }
     
