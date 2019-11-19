@@ -20,6 +20,7 @@
 		397E279D2381AE9600EA90C0 /* TableViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E279C2381AE9600EA90C0 /* TableViewControllerTwo.swift */; };
 		39D4130A2381BED900A383CE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D413092381BED900A383CE /* UIColor+Additions.swift */; };
 		39DE73EB2382514E0017D333 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE73EA2382514E0017D333 /* TabbarViewController.swift */; };
+		B6CE0F86238296EF00940039 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE0F85238296EF00940039 /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		39D413092381BED900A383CE /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		39DE73EA2382514E0017D333 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		67749BB494DA4780BFF35C12 /* Pods_GS25_WITHSOPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS25_WITHSOPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CE0F85238296EF00940039 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				397E27932381AC9700EA90C0 /* TableViewControllerOne.swift */,
 				397E279C2381AE9600EA90C0 /* TableViewControllerTwo.swift */,
 				39DE73EA2382514E0017D333 /* TabbarViewController.swift */,
+				B6CE0F85238296EF00940039 /* MyPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				397E27942381AC9700EA90C0 /* TableViewControllerOne.swift in Sources */,
 				397E277E2381A6D300EA90C0 /* ViewController.swift in Sources */,
 				397E277A2381A6D300EA90C0 /* AppDelegate.swift in Sources */,
+				B6CE0F86238296EF00940039 /* MyPageViewController.swift in Sources */,
 				397E27972381ACB700EA90C0 /* TableViewCellOne.swift in Sources */,
 				397E27992381AE6400EA90C0 /* TableViewCellTwo.swift in Sources */,
 				397E277C2381A6D300EA90C0 /* SceneDelegate.swift in Sources */,
