@@ -10,22 +10,263 @@ import UIKit
 import XLPagerTabStrip
 
 class TableViewControllerOne: UITableViewController {
-
+    
     
     let navigationHeight = UIApplication.shared.statusBarFrame.height
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+//        self.view.backgroundColor = UIColor.white
+        
+        let nameLabel = UILabel()
+        nameLabel.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
+        nameLabel.textColor = UIColor.charcoalGrey
+        nameLabel.textAlignment = .left
+        nameLabel.text = "세림님,"
+        self.view.addSubview(nameLabel)
+        
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let nameWidthConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 236)
+        
+        let nameHeightConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
+        
+        let nameLeadingConstraint = NSLayoutConstraint(item: nameLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 61)
+        
+        let nameTopConstraint = NSLayoutConstraint(item: nameLabel, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 76)
+        
+        NSLayoutConstraint.activate([nameWidthConstraint, nameHeightConstraint, nameLeadingConstraint, nameTopConstraint])
+        
+        let pointLabel1 = UILabel()
+        pointLabel1.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
+        pointLabel1.textColor = UIColor.charcoalGrey
+        pointLabel1.textAlignment = .left
+        pointLabel1.text = "현재 누적포인트"
+        self.view.addSubview(pointLabel1)
+        
+        pointLabel1.translatesAutoresizingMaskIntoConstraints = false
+        
+        let point1WidthConstraint = NSLayoutConstraint(item: pointLabel1, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 115)
+        
+        let point1HeightConstraint = NSLayoutConstraint(item: pointLabel1, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
+        
+        let point1LeadingConstraint = NSLayoutConstraint(item: pointLabel1, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 61)
+        
+        let point1VerticalSpace = NSLayoutConstraint(item:pointLabel1, attribute: .top, relatedBy: .equal, toItem: nameLabel, attribute: .bottom, multiplier: 1, constant: 2)
+        
+        NSLayoutConstraint.activate([point1WidthConstraint, point1HeightConstraint, point1LeadingConstraint, point1VerticalSpace])
+        
+        let pointLabel2 = UILabel()
+        pointLabel2.font = UIFont.boldSystemFont(ofSize: 17.0)
+        pointLabel2.textColor = UIColor.aquaMarine
+        pointLabel2.textAlignment = .left
+        pointLabel2.text = "12,050 P"
+        self.view.addSubview(pointLabel2)
+        
+        pointLabel2.translatesAutoresizingMaskIntoConstraints = false
+        
+        let point2WidthConstraint = NSLayoutConstraint(item: pointLabel2, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 77)
+        
+        let point2HeightConstraint = NSLayoutConstraint(item: pointLabel2, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
+        
+        let point2VerticalSpace = NSLayoutConstraint(item:pointLabel2, attribute: .top, relatedBy: .equal, toItem: nameLabel, attribute: .bottom, multiplier: 1, constant: 2)
+        
+        let point2LeadingSpace = NSLayoutConstraint(item: pointLabel2, attribute: .leading, relatedBy: .equal, toItem: pointLabel1, attribute: .trailing, multiplier: 1, constant: 0)
+        
+        NSLayoutConstraint.activate([point2WidthConstraint, point2HeightConstraint, point2VerticalSpace, point2LeadingSpace])
+              
+        
+        let pointLabel3 = UILabel()
+        pointLabel3.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
+        pointLabel3.textColor = UIColor.charcoalGrey
+        pointLabel3.textAlignment = .left
+        pointLabel3.text = "입니다."
+        self.view.addSubview(pointLabel3)
+        
+        pointLabel3.translatesAutoresizingMaskIntoConstraints = false
+        
+        let point3WidthConstraint = NSLayoutConstraint(item: pointLabel3, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
+        
+        let point3HeightConstraint = NSLayoutConstraint(item: pointLabel3, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
+        
+        let point3VerticalSpace = NSLayoutConstraint(item:pointLabel3, attribute: .top, relatedBy: .equal, toItem: nameLabel, attribute: .bottom, multiplier: 1, constant: 2)
+        
+        let point3LeadingSpace = NSLayoutConstraint(item: pointLabel3, attribute: .leading, relatedBy: .equal, toItem: pointLabel2, attribute: .trailing, multiplier: 1, constant: 0)
+        
+        NSLayoutConstraint.activate([point3WidthConstraint, point3HeightConstraint, point3VerticalSpace, point3LeadingSpace])
+        
+        
 
-    tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        // qr code Image
+        let qrImage = UIImage(named: "20191115120619")
+        let qrImageView = UIImageView(image: qrImage!)
+        //        qrImageView.frame = CGRect(x:84, y:135, width: 192, height: 181)
+        self.view.addSubview(qrImageView)
+        
+        qrImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let qrImageVerticalSpace = NSLayoutConstraint(item:qrImageView, attribute: .top, relatedBy: .equal, toItem: pointLabel1, attribute: .bottom, multiplier: 1, constant: 18)
+        
+        let qrImageHorizontalConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        
+        let qrImageWidthConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 192)
+        
+        let qrImageHeightConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 181)
+        
+        NSLayoutConstraint.activate([qrImageVerticalSpace, qrImageHorizontalConstraint, qrImageWidthConstraint, qrImageHeightConstraint])
+        
+        
+        
+        // gs point Image - 1
+        
+        let gsImage = UIImage(named: "1StIcon")
+        let gsImageView = UIImageView(image: gsImage)
+        self.view.addSubview(gsImageView)
+        
+        gsImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let gsImageVerticalSpace = NSLayoutConstraint(item: gsImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        
+        
+        let gsWidthConstraint = NSLayoutConstraint(item: gsImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+        
+        let gsHeightConstraint = NSLayoutConstraint(item: gsImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+        
+//                let gsTrailingSpace = NSLayoutConstraint(item: gsImageView, attribute: .trailing, relatedBy: .equal, toItem: cardImageView, attribute: .leading, multiplier: 1, constant: 22)
+        
+        
+        
+        let gsImageLeadingConstraint = NSLayoutConstraint(item: gsImageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 71)
+        //
+        //        let gsImageTrailingConstraint = NSLayoutConstraint(item: gsImageView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 231)
+        
+        NSLayoutConstraint.activate([gsImageVerticalSpace, gsWidthConstraint, gsHeightConstraint, gsImageLeadingConstraint])
+        
+        
+        
+        
+        
+        // card Image - 2
+        
+        let cardImage = UIImage(named: "2NdIcon")
+        let cardImageView = UIImageView(image: cardImage!)
+        self.view.addSubview(cardImageView)
 
+        cardImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        let cardImageVerticalSpace = NSLayoutConstraint(item: cardImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        
+        let cardLeadingSpace = NSLayoutConstraint(item: cardImageView, attribute: .leading, relatedBy: .equal, toItem: gsImageView, attribute: .trailing, multiplier: 1, constant: 22)
+        
+
+//        let cardImageHorizontalConstraint = NSLayoutConstraint(item: cardImageView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+
+        let cardWidthConstraint = NSLayoutConstraint(item: cardImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+
+        let cardHeightConstraint = NSLayoutConstraint(item: cardImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+
+        NSLayoutConstraint.activate([cardImageVerticalSpace, cardLeadingSpace, cardWidthConstraint, cardHeightConstraint])
+        
+        
+        
+        // mobile pop Image - 3
+        
+        let mobildImage = UIImage(named: "3RdIcon")
+        let mobileImageView = UIImageView(image: mobildImage!)
+        self.view.addSubview(mobileImageView)
+
+        mobileImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        let mobileImageVerticalSpace = NSLayoutConstraint(item: mobileImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        
+        let mobileLeadingSpace = NSLayoutConstraint(item: mobileImageView, attribute: .leading, relatedBy: .equal, toItem: cardImageView, attribute: .trailing, multiplier: 1, constant: 23)
+               
+
+//        let mobileImageLeadingConstraint = NSLayoutConstraint(item: mobileImageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 232)
+//
+//        let mobileImageTrailingConstraint = NSLayoutConstraint(item: mobileImageView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 70)
+
+        let mobileWidthConstraint = NSLayoutConstraint(item: mobileImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+
+        let mobileHeightConstraint = NSLayoutConstraint(item: mobileImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
+
+        NSLayoutConstraint.activate([mobileImageVerticalSpace, mobileLeadingSpace ,mobileWidthConstraint, mobileHeightConstraint])
+
+
+        
+        let gsLabel = UILabel()
+        gsLabel.font = UIFont.systemFont(ofSize: 13.0)
+        gsLabel.textColor = UIColor.charcoalGrey
+        gsLabel.text = "GS&POINT"
+        self.view.addSubview(gsLabel)
+
+        gsLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let gsLabelVerticalSpace = NSLayoutConstraint(item: gsLabel, attribute: .top, relatedBy: .equal, toItem: gsImageView, attribute: .bottom, multiplier: 1, constant: 5)
+
+        let gsLabelLeadingConstraint = NSLayoutConstraint(item: gsLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 70)
+
+        NSLayoutConstraint.activate([gsLabelVerticalSpace, gsLabelLeadingConstraint])
+        
+        
+        let cardLabel = UILabel()
+        cardLabel.font = UIFont.systemFont(ofSize: 13.0)
+        cardLabel.textColor = UIColor.charcoalGrey
+        cardLabel.text = "할인카드"
+        self.view.addSubview(cardLabel)
+        
+        cardLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let cardLabelVerticalSpace = NSLayoutConstraint(item: cardLabel, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 5)
+
+        let cardLeadingConstraint = NSLayoutConstraint(item: cardLabel, attribute: .leading, relatedBy: .equal, toItem: gsLabel, attribute: .trailing, multiplier: 1, constant: 21)
+
+        NSLayoutConstraint.activate([cardLabelVerticalSpace, cardLeadingConstraint])
+        
+        
+        let mobileLabel = UILabel()
+        mobileLabel.font = UIFont.systemFont(ofSize: 13.0)
+        mobileLabel.textColor = UIColor.charcoalGrey
+        mobileLabel.text = "모바일팝"
+        self.view.addSubview(mobileLabel)
+        
+        mobileLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let mobileLabelVerticalSpace = NSLayoutConstraint(item: mobileLabel, attribute: .top, relatedBy: .equal, toItem: mobileImageView, attribute: .bottom, multiplier: 1, constant: 5)
+        
+//        let mobileLabelTrailingConstraint = NSLayoutConstraint(item: mobileLabel, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 74.5)
+        
+        let mobileLeadingConstraint = NSLayoutConstraint(item: mobileLabel, attribute: .leading, relatedBy: .equal, toItem: cardLabel, attribute: .trailing, multiplier: 1, constant: 35)
+        
+        NSLayoutConstraint.activate([mobileLabelVerticalSpace, mobileLeadingConstraint])
+        
+        
+        
+
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
-
+    
     
     // MARK: - Table view data source
-
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
@@ -34,11 +275,11 @@ class TableViewControllerOne: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      
+        
         return self.view.bounds.height - ( navigationHeight + navigationController!.navigationBar.frame.height + (tabBarController?.navigationController?.navigationBar.frame.height)!)
     }
     
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellOne", for: indexPath) as! TableViewCellOne
@@ -63,3 +304,4 @@ extension TableViewControllerOne: IndicatorInfoProvider {
     
     
 }
+
