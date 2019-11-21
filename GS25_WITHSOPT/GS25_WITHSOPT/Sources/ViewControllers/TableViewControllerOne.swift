@@ -25,7 +25,7 @@ class TableViewControllerOne: UITableViewController {
 //        self.view.backgroundColor = UIColor.white
         
         let nameLabel = UILabel()
-        nameLabel.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
+        nameLabel.font = UIFont(name: "SDGothicNeoa-cLt", size: 18.0)
         nameLabel.textColor = UIColor.charcoalGrey
         nameLabel.textAlignment = .left
         nameLabel.text = "세림님,"
@@ -33,18 +33,18 @@ class TableViewControllerOne: UITableViewController {
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let nameWidthConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 236)
+        let nameWidthConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
         
         let nameHeightConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
         
-        let nameLeadingConstraint = NSLayoutConstraint(item: nameLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 61)
+        let nameLeadingConstraint = NSLayoutConstraint(item: nameLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 62.5)
         
-        let nameTopConstraint = NSLayoutConstraint(item: nameLabel, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 76)
+        let nameTopConstraint = NSLayoutConstraint(item: nameLabel, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 95)
         
         NSLayoutConstraint.activate([nameWidthConstraint, nameHeightConstraint, nameLeadingConstraint, nameTopConstraint])
         
         let pointLabel1 = UILabel()
-        pointLabel1.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
+        pointLabel1.font = UIFont(name: "SDGothicNeoa-cLt", size: 18.0)
         pointLabel1.textColor = UIColor.charcoalGrey
         pointLabel1.textAlignment = .left
         pointLabel1.text = "현재 누적포인트"
@@ -56,14 +56,14 @@ class TableViewControllerOne: UITableViewController {
         
         let point1HeightConstraint = NSLayoutConstraint(item: pointLabel1, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 20)
         
-        let point1LeadingConstraint = NSLayoutConstraint(item: pointLabel1, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 61)
+        let point1LeadingConstraint = NSLayoutConstraint(item: pointLabel1, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 62.5)
         
         let point1VerticalSpace = NSLayoutConstraint(item:pointLabel1, attribute: .top, relatedBy: .equal, toItem: nameLabel, attribute: .bottom, multiplier: 1, constant: 2)
         
         NSLayoutConstraint.activate([point1WidthConstraint, point1HeightConstraint, point1LeadingConstraint, point1VerticalSpace])
         
         let pointLabel2 = UILabel()
-        pointLabel2.font = UIFont.boldSystemFont(ofSize: 17.0)
+        pointLabel2.font = UIFont.boldSystemFont(ofSize: 18.0)
         pointLabel2.textColor = UIColor.aquaMarine
         pointLabel2.textAlignment = .left
         pointLabel2.text = "12,050 P"
@@ -111,13 +111,13 @@ class TableViewControllerOne: UITableViewController {
         
         qrImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        let qrImageVerticalSpace = NSLayoutConstraint(item:qrImageView, attribute: .top, relatedBy: .equal, toItem: pointLabel1, attribute: .bottom, multiplier: 1, constant: 18)
+        let qrImageVerticalSpace = NSLayoutConstraint(item:qrImageView, attribute: .top, relatedBy: .equal, toItem: pointLabel1, attribute: .bottom, multiplier: 1, constant: 30)
         
         let qrImageHorizontalConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
         
-        let qrImageWidthConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 192)
+        let qrImageWidthConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 210)
         
-        let qrImageHeightConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 181)
+        let qrImageHeightConstraint = NSLayoutConstraint(item: qrImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 199)
         
         NSLayoutConstraint.activate([qrImageVerticalSpace, qrImageHorizontalConstraint, qrImageWidthConstraint, qrImageHeightConstraint])
         
@@ -131,7 +131,7 @@ class TableViewControllerOne: UITableViewController {
         
         gsImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        let gsImageVerticalSpace = NSLayoutConstraint(item: gsImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        let gsImageVerticalSpace = NSLayoutConstraint(item: gsImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 3)
         
         
         let gsWidthConstraint = NSLayoutConstraint(item: gsImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 58)
@@ -142,7 +142,7 @@ class TableViewControllerOne: UITableViewController {
         
         
         
-        let gsImageLeadingConstraint = NSLayoutConstraint(item: gsImageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 71)
+        let gsImageLeadingConstraint = NSLayoutConstraint(item: gsImageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 77)
         //
         //        let gsImageTrailingConstraint = NSLayoutConstraint(item: gsImageView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 231)
         
@@ -160,9 +160,9 @@ class TableViewControllerOne: UITableViewController {
 
         cardImageView.translatesAutoresizingMaskIntoConstraints = false
 
-        let cardImageVerticalSpace = NSLayoutConstraint(item: cardImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        let cardImageVerticalSpace = NSLayoutConstraint(item: cardImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 3)
         
-        let cardLeadingSpace = NSLayoutConstraint(item: cardImageView, attribute: .leading, relatedBy: .equal, toItem: gsImageView, attribute: .trailing, multiplier: 1, constant: 22)
+        let cardLeadingSpace = NSLayoutConstraint(item: cardImageView, attribute: .leading, relatedBy: .equal, toItem: gsImageView, attribute: .trailing, multiplier: 1, constant: 24)
         
 
 //        let cardImageHorizontalConstraint = NSLayoutConstraint(item: cardImageView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
@@ -183,9 +183,9 @@ class TableViewControllerOne: UITableViewController {
 
         mobileImageView.translatesAutoresizingMaskIntoConstraints = false
 
-        let mobileImageVerticalSpace = NSLayoutConstraint(item: mobileImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 0)
+        let mobileImageVerticalSpace = NSLayoutConstraint(item: mobileImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 3)
         
-        let mobileLeadingSpace = NSLayoutConstraint(item: mobileImageView, attribute: .leading, relatedBy: .equal, toItem: cardImageView, attribute: .trailing, multiplier: 1, constant: 23)
+        let mobileLeadingSpace = NSLayoutConstraint(item: mobileImageView, attribute: .leading, relatedBy: .equal, toItem: cardImageView, attribute: .trailing, multiplier: 1, constant: 24)
                
 
 //        let mobileImageLeadingConstraint = NSLayoutConstraint(item: mobileImageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 232)
@@ -208,9 +208,9 @@ class TableViewControllerOne: UITableViewController {
 
         gsLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let gsLabelVerticalSpace = NSLayoutConstraint(item: gsLabel, attribute: .top, relatedBy: .equal, toItem: gsImageView, attribute: .bottom, multiplier: 1, constant: 5)
+        let gsLabelVerticalSpace = NSLayoutConstraint(item: gsLabel, attribute: .top, relatedBy: .equal, toItem: gsImageView, attribute: .bottom, multiplier: 1, constant: 7)
 
-        let gsLabelLeadingConstraint = NSLayoutConstraint(item: gsLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 70)
+        let gsLabelLeadingConstraint = NSLayoutConstraint(item: gsLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 75)
 
         NSLayoutConstraint.activate([gsLabelVerticalSpace, gsLabelLeadingConstraint])
         
@@ -223,9 +223,9 @@ class TableViewControllerOne: UITableViewController {
         
         cardLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let cardLabelVerticalSpace = NSLayoutConstraint(item: cardLabel, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 5)
+        let cardLabelVerticalSpace = NSLayoutConstraint(item: cardLabel, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 6)
 
-        let cardLeadingConstraint = NSLayoutConstraint(item: cardLabel, attribute: .leading, relatedBy: .equal, toItem: gsLabel, attribute: .trailing, multiplier: 1, constant: 21)
+        let cardLeadingConstraint = NSLayoutConstraint(item: cardLabel, attribute: .leading, relatedBy: .equal, toItem: gsLabel, attribute: .trailing, multiplier: 1, constant: 26)
 
         NSLayoutConstraint.activate([cardLabelVerticalSpace, cardLeadingConstraint])
         
@@ -238,7 +238,7 @@ class TableViewControllerOne: UITableViewController {
         
         mobileLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let mobileLabelVerticalSpace = NSLayoutConstraint(item: mobileLabel, attribute: .top, relatedBy: .equal, toItem: mobileImageView, attribute: .bottom, multiplier: 1, constant: 5)
+        let mobileLabelVerticalSpace = NSLayoutConstraint(item: mobileLabel, attribute: .top, relatedBy: .equal, toItem: mobileImageView, attribute: .bottom, multiplier: 1, constant: 7)
         
 //        let mobileLabelTrailingConstraint = NSLayoutConstraint(item: mobileLabel, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 74.5)
         
@@ -248,16 +248,47 @@ class TableViewControllerOne: UITableViewController {
         
         
         
+        let saveImage = UIImage(named: "20191115122238")
+        let saveImageView = UIImageView(image: saveImage!)
+        self.view.addSubview(saveImageView)
+            saveImageView.translatesAutoresizingMaskIntoConstraints = false
+         
+            
+        let saveImageheightConstrant = NSLayoutConstraint(item: saveImageView, attribute: .top, relatedBy: .equal, toItem: qrImageView, attribute: .bottom, multiplier: 1, constant: 194)
+        
+        NSLayoutConstraint.activate([saveImageheightConstrant])
+        
 
+        let loginImage = UIImage(named:"1580")
+        let loginImageView = UIImageView(image: loginImage!)
+        self.view.addSubview(loginImageView)
+        loginImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let loginImageviewConstrant = NSLayoutConstraint(item: loginImageView, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 47)
+        NSLayoutConstraint.activate([loginImageviewConstrant])
         
         
-      
+        let loginLeadingConstraint = NSLayoutConstraint(item: loginImageView, attribute: .leading, relatedBy: .equal, toItem: view , attribute: .trailing, multiplier: 1, constant: 69)
         
+        NSLayoutConstraint.activate([loginLeadingConstraint])
         
-        
-        
-        
-        
+         
+                let loginLabel = UILabel()
+                loginLabel.font = UIFont.systemFont(ofSize: 15.0)
+                loginLabel.textColor = UIColor.white
+                loginLabel.text = "모바일팝 로그인하러 가기>"
+                self.view.addSubview(loginLabel)
+                
+                loginLabel.translatesAutoresizingMaskIntoConstraints = false
+                
+                let loginLabelVerticalSpace = NSLayoutConstraint(item: loginLabel, attribute: .top, relatedBy: .equal, toItem:  loginImageView, attribute: .top, multiplier: 1, constant: 18)
+                
+         
+                let loginLabelLeadingConstraint = NSLayoutConstraint(item: loginLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 109)
+                
+                NSLayoutConstraint.activate([loginLabelVerticalSpace, loginLabelLeadingConstraint])
+                
+                
         
         
         
