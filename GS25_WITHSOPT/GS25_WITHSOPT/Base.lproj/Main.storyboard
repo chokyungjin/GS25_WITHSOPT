@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdf-11-BYz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k4c-iS-yPc">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -122,7 +122,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="ZIg-Zh-2N4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Oe7-Ti-1Ev" customClass="TabBarViewController" customModule="GS25_WITHSOPT" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="Oe7-Ti-1Ev" customClass="TabBarViewController" customModule="GS25_WITHSOPT" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="UII-Kj-1Tw">
                         <nil key="title"/>
@@ -132,7 +132,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="1200PxGs25Bi2019Svg"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" image="190" id="AxU-sV-btK"/>
+                        <barButtonItem key="rightBarButtonItem" image="190" id="AxU-sV-btK">
+                            <connections>
+                                <action selector="myPageMove:" destination="Oe7-Ti-1Ev" id="XIB-K2-Adk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CvN-sS-9o3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -140,6 +144,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="myPageBtn" destination="AxU-sV-btK" id="EYA-ra-jn9"/>
                         <segue destination="fhL-0F-Rcw" kind="relationship" relationship="viewControllers" id="jwY-VM-vG3"/>
                         <segue destination="dcB-S8-uX9" kind="relationship" relationship="viewControllers" id="fke-K1-Y2T"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4ek-aR-ysd"/>
@@ -202,7 +207,7 @@
         <!--My Page View Controller-->
         <scene sceneID="YUg-8G-lg9">
             <objects>
-                <viewController id="sdf-11-BYz" customClass="MyPageViewController" customModule="GS25_WITHSOPT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageVC" id="sdf-11-BYz" customClass="MyPageViewController" customModule="GS25_WITHSOPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BuZ-c8-2TO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,6 +241,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i74-if-jfe">
                                                         <rect key="frame" x="349" y="23" width="10" height="10.333333333333336"/>
                                                         <state key="normal" image="closeIc"/>
+                                                        <connections>
+                                                            <action selector="backBtn:" destination="sdf-11-BYz" eventType="touchUpInside" id="VpK-RR-Pgw"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.039215686270000001" green="0.46274509800000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -393,10 +401,10 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderIc" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-i0-bsI">
-                                                                <rect key="frame" x="34" y="20.666666666666686" width="22" height="19.666666666666671"/>
+                                                                <rect key="frame" x="34" y="20.666666666666686" width="44" height="19.666666666666671"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문/배송 조회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-KF-j5w">
-                                                                <rect key="frame" x="72" y="23" width="81" height="17"/>
+                                                                <rect key="frame" x="94" y="23" width="81" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -426,10 +434,10 @@
                                                         <rect key="frame" x="0.0" y="61" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmIc" translatesAutoresizingMaskIntoConstraints="NO" id="GME-IE-ebh">
-                                                                <rect key="frame" x="33" y="16.666666666666686" width="21" height="27"/>
+                                                                <rect key="frame" x="33" y="16.666666666666686" width="42" height="54"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNy-uW-Ib0">
-                                                                <rect key="frame" x="70.666666666666671" y="24" width="24.333333333333329" height="16"/>
+                                                                <rect key="frame" x="91.666666666666671" y="24" width="24.333333333333329" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -457,10 +465,10 @@
                                                         <rect key="frame" x="0.0" y="122" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="membershipIc" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-oJ-OLM">
-                                                                <rect key="frame" x="34" y="22" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="49" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멤버십 카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvd-a9-NBa">
-                                                                <rect key="frame" x="72" y="23" width="64.666666666666686" height="17"/>
+                                                                <rect key="frame" x="94" y="23" width="64.666666666666686" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -488,10 +496,10 @@
                                                         <rect key="frame" x="0.0" y="183" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receiptIc" translatesAutoresizingMaskIntoConstraints="NO" id="Sv9-B6-LcE">
-                                                                <rect key="frame" x="34" y="19.666666666666629" width="20" height="22"/>
+                                                                <rect key="frame" x="34" y="68.666666666666629" width="40" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모바일 영수증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM2-Nx-3TW">
-                                                                <rect key="frame" x="72.333333333333314" y="23" width="76.666666666666686" height="17"/>
+                                                                <rect key="frame" x="92.333333333333314" y="23" width="76.666666666666686" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -519,10 +527,10 @@
                                                         <rect key="frame" x="0.0" y="244" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponIc" translatesAutoresizingMaskIntoConstraints="NO" id="lRy-h5-J9N">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="88.333333333333371" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할인쿠폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbZ-uG-aLl">
-                                                                <rect key="frame" x="75.333333333333329" y="19" width="48.666666666666671" height="17"/>
+                                                                <rect key="frame" x="97.333333333333329" y="19" width="48.666666666666671" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -549,10 +557,10 @@
                                                         <rect key="frame" x="0.0" y="305" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myeventIc" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-xJ-DsJ">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="110.33333333333337" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoX-nn-t5g">
-                                                                <rect key="frame" x="73" y="20" width="60.666666666666657" height="17"/>
+                                                                <rect key="frame" x="95" y="20" width="60.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -579,10 +587,10 @@
                                                         <rect key="frame" x="0.0" y="366" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoIc" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-0v-7Rq">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="132.33333333333337" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객센터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-4m-Vfv">
-                                                                <rect key="frame" x="73" y="21" width="48.666666666666657" height="17"/>
+                                                                <rect key="frame" x="95" y="21" width="48.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -639,7 +647,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R2-uY-Le3">
-                                                <rect key="frame" x="303" y="157" width="10" height="18"/>
+                                                <rect key="frame" x="303.66666666666669" y="157" width="9.3333333333333144" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" red="0.039215686270000001" green="0.46274509800000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>

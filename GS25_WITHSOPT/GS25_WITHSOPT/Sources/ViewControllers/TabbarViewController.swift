@@ -10,12 +10,25 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    //IBOutlets...
+    @IBInspectable var defaultIndex: Int = 2
+    @IBOutlet weak var myPageBtn: UIBarButtonItem!
     
-  @IBInspectable var defaultIndex: Int = 2
-
+    //inits..
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
     }
+    
+    
+    @IBAction func myPageMove(_ sender: Any) {
+        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageVC") as? MyPageViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
+        }
+    }
+    
+    
     
 }
