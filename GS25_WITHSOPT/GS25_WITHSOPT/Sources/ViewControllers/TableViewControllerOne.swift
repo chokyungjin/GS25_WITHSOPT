@@ -204,15 +204,18 @@ class TableViewControllerOne: UITableViewController {
         gsLabel.font = UIFont.systemFont(ofSize: 13.0)
         gsLabel.textColor = UIColor.charcoalGrey
         gsLabel.text = "GS&POINT"
+        gsLabel.textAlignment = .center
+        //gsLabel.frame = CGRect(x: 77.5, y: 505, width: 60, height: 13)
+        //gsLabel.invalidateIntrinsicContentSize()
         self.view.addSubview(gsLabel)
 
         gsLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let gsLabelVerticalSpace = NSLayoutConstraint(item: gsLabel, attribute: .top, relatedBy: .equal, toItem: gsImageView, attribute: .bottom, multiplier: 1, constant: 7)
 
-        let gsLabelLeadingConstraint = NSLayoutConstraint(item: gsLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 75)
+        let gsLabelLeadingConstraint = NSLayoutConstraint(item: gsLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 73.5)
 
-        NSLayoutConstraint.activate([gsLabelVerticalSpace, gsLabelLeadingConstraint])
+        NSLayoutConstraint.activate([gsLabelVerticalSpace,gsLabelLeadingConstraint])
         
         
         let cardLabel = UILabel()
@@ -223,11 +226,11 @@ class TableViewControllerOne: UITableViewController {
         
         cardLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let cardLabelVerticalSpace = NSLayoutConstraint(item: cardLabel, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 6)
+        let cardLabelVerticalSpace = NSLayoutConstraint(item: cardLabel, attribute: .top, relatedBy: .equal, toItem: cardImageView, attribute: .bottom, multiplier: 1, constant: 7)
 
-        let cardLeadingConstraint = NSLayoutConstraint(item: cardLabel, attribute: .leading, relatedBy: .equal, toItem: gsLabel, attribute: .trailing, multiplier: 1, constant: 26)
+        let cardLeadingConstraint = NSLayoutConstraint(item: cardLabel, attribute: .leading, relatedBy: .lessThanOrEqual, toItem: gsLabel, attribute: .trailing, multiplier: 1, constant: 28)
 
-        NSLayoutConstraint.activate([cardLabelVerticalSpace, cardLeadingConstraint])
+        NSLayoutConstraint.activate([cardLabelVerticalSpace,cardLeadingConstraint])
         
         
         let mobileLabel = UILabel()
@@ -244,7 +247,9 @@ class TableViewControllerOne: UITableViewController {
         
         let mobileLeadingConstraint = NSLayoutConstraint(item: mobileLabel, attribute: .leading, relatedBy: .equal, toItem: cardLabel, attribute: .trailing, multiplier: 1, constant: 35)
         
-        NSLayoutConstraint.activate([mobileLabelVerticalSpace, mobileLeadingConstraint])
+        let mobileTrailingConstraint = NSLayoutConstraint(item: mobileLabel, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 80.5)
+        
+        NSLayoutConstraint.activate([mobileLabelVerticalSpace,mobileLeadingConstraint])
         
         
         
@@ -276,7 +281,7 @@ class TableViewControllerOne: UITableViewController {
                 let loginLabel = UILabel()
                 loginLabel.font = UIFont.systemFont(ofSize: 15.0)
                 loginLabel.textColor = UIColor.white
-                loginLabel.text = "모바일팝 로그인하러 가기>"
+                loginLabel.text = "모바일팝 로그인하러 가기 >"
                 self.view.addSubview(loginLabel)
                 
                 loginLabel.translatesAutoresizingMaskIntoConstraints = false
