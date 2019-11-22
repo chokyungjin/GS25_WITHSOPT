@@ -18,11 +18,11 @@
 
 ### Completed View 💻 
 
-#### $Home$
+> #### Home
 
 <img width="300" alt="스크린샷 2019-11-21 오후 11 41 08" src="https://user-images.githubusercontent.com/46750574/69348579-c150c300-0cb9-11ea-853b-116ae912a3fd.png"><img width="300" alt="스크린샷 2019-11-21 오후 11 41 47" src="https://user-images.githubusercontent.com/46750574/69348580-c150c300-0cb9-11ea-9967-3b475803304c.png">
 
-#### $MyPage$
+> #### MyPage
 
 <img width="300" alt="스크린샷 2019-11-22 오후 2 50 40" src="https://user-images.githubusercontent.com/46750574/69401151-9dcc5d80-0d37-11ea-9d8e-0d2a72657c29.png"><img width="300" alt="스크린샷 2019-11-22 오후 2 51 00" src="https://user-images.githubusercontent.com/46750574/69401153-9dcc5d80-0d37-11ea-8946-5d3bff2fe29f.png">
 
