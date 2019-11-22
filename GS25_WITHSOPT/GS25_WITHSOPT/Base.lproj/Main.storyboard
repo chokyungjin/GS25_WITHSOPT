@@ -397,10 +397,10 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderIc" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-i0-bsI">
-                                                                <rect key="frame" x="34" y="20.666666666666686" width="22" height="19.666666666666671"/>
+                                                                <rect key="frame" x="34" y="20.666666666666686" width="44" height="19.666666666666671"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문/배송 조회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-KF-j5w">
-                                                                <rect key="frame" x="72" y="23" width="81" height="17"/>
+                                                                <rect key="frame" x="94" y="23" width="81" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -430,10 +430,10 @@
                                                         <rect key="frame" x="0.0" y="61" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmIc" translatesAutoresizingMaskIntoConstraints="NO" id="GME-IE-ebh">
-                                                                <rect key="frame" x="33" y="16.666666666666686" width="21" height="27"/>
+                                                                <rect key="frame" x="33" y="16.666666666666686" width="42" height="54"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNy-uW-Ib0">
-                                                                <rect key="frame" x="70.666666666666671" y="24" width="24.333333333333329" height="16"/>
+                                                                <rect key="frame" x="91.666666666666671" y="24" width="24.333333333333329" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -461,10 +461,10 @@
                                                         <rect key="frame" x="0.0" y="122" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="membershipIc" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-oJ-OLM">
-                                                                <rect key="frame" x="34" y="22" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="49" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멤버십 카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvd-a9-NBa">
-                                                                <rect key="frame" x="72" y="23" width="64.666666666666686" height="17"/>
+                                                                <rect key="frame" x="94" y="23" width="64.666666666666686" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -492,10 +492,10 @@
                                                         <rect key="frame" x="0.0" y="183" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receiptIc" translatesAutoresizingMaskIntoConstraints="NO" id="Sv9-B6-LcE">
-                                                                <rect key="frame" x="34" y="19.666666666666629" width="20" height="22"/>
+                                                                <rect key="frame" x="34" y="68.666666666666629" width="40" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모바일 영수증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM2-Nx-3TW">
-                                                                <rect key="frame" x="72.333333333333314" y="23" width="76.666666666666686" height="17"/>
+                                                                <rect key="frame" x="92.333333333333314" y="23" width="76.666666666666686" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -523,10 +523,10 @@
                                                         <rect key="frame" x="0.0" y="244" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponIc" translatesAutoresizingMaskIntoConstraints="NO" id="lRy-h5-J9N">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="88.333333333333371" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할인쿠폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbZ-uG-aLl">
-                                                                <rect key="frame" x="75.333333333333329" y="19" width="48.666666666666671" height="17"/>
+                                                                <rect key="frame" x="97.333333333333329" y="19" width="48.666666666666671" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -553,10 +553,10 @@
                                                         <rect key="frame" x="0.0" y="305" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myeventIc" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-xJ-DsJ">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="110.33333333333337" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoX-nn-t5g">
-                                                                <rect key="frame" x="73" y="20" width="60.666666666666657" height="17"/>
+                                                                <rect key="frame" x="95" y="20" width="60.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -583,10 +583,10 @@
                                                         <rect key="frame" x="0.0" y="366" width="375" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoIc" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-0v-7Rq">
-                                                                <rect key="frame" x="34" y="17.333333333333371" width="22" height="22"/>
+                                                                <rect key="frame" x="34" y="132.33333333333337" width="44" height="44"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객센터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-4m-Vfv">
-                                                                <rect key="frame" x="73" y="21" width="48.666666666666657" height="17"/>
+                                                                <rect key="frame" x="95" y="21" width="48.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>

@@ -26,6 +26,7 @@ class MyPageViewController: UIViewController {
         self.attendButton.layer.cornerRadius = 5
         
         
+        
     }
     
 
