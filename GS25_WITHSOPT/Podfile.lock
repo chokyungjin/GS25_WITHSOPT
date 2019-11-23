@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
+  - Kingfisher (4.10.1)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Kingfisher (~> 4.10.1)
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 42721bdb8c4d3f086cbe14ee0a8fab5df5b6bc95
+PODFILE CHECKSUM: 9a614b7867087b9280fdfef35292813dc89d2e50
 
 COCOAPODS: 1.8.4
