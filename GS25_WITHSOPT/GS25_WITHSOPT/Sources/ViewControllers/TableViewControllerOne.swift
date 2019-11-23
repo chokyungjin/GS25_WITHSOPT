@@ -82,6 +82,8 @@ class TableViewControllerOne: UITableViewController {
         NSLayoutConstraint.activate([point2WidthConstraint, point2HeightConstraint, point2VerticalSpace, point2LeadingSpace])
         
         
+        
+        
         let pointLabel3 = UILabel()
         pointLabel3.font = UIFont(name: "SDGothicNeoa-cLt", size: 17.0)
         pointLabel3.textColor = UIColor.charcoalGrey
@@ -278,23 +280,23 @@ class TableViewControllerOne: UITableViewController {
         NSLayoutConstraint.activate([loginLeadingConstraint])
         
         
-//        let loginLabel = UILabel()
-//        loginLabel.font = UIFont.systemFont(ofSize: 15.0)
-//        loginLabel.textColor = UIColor.white
-//        loginLabel.text = "모바일팝 로그인하러 가기 >"
-//        self.view.addSubview(loginLabel)
-//
-//        loginLabel.translatesAutoresizingMaskIntoConstraints = false
-//
-//        let loginLabelVerticalSpace = NSLayoutConstraint(item: loginLabel, attribute: .top, relatedBy: .equal, toItem:  loginImageView, attribute: .top, multiplier: 1, constant: 18)
-//
-//
-//        let loginLabelLeadingConstraint = NSLayoutConstraint(item: loginLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 109)
-//
-//        NSLayoutConstraint.activate([loginLabelVerticalSpace, loginLabelLeadingConstraint])
+        //        let loginLabel = UILabel()
+        //        loginLabel.font = UIFont.systemFont(ofSize: 15.0)
+        //        loginLabel.textColor = UIColor.white
+        //        loginLabel.text = "모바일팝 로그인하러 가기 >"
+        //        self.view.addSubview(loginLabel)
+        //
+        //        loginLabel.translatesAutoresizingMaskIntoConstraints = false
+        //
+        //        let loginLabelVerticalSpace = NSLayoutConstraint(item: loginLabel, attribute: .top, relatedBy: .equal, toItem:  loginImageView, attribute: .top, multiplier: 1, constant: 18)
+        //
+        //
+        //        let loginLabelLeadingConstraint = NSLayoutConstraint(item: loginLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 109)
+        //
+        //        NSLayoutConstraint.activate([loginLabelVerticalSpace, loginLabelLeadingConstraint])
         
         
-//
+        //
         
         // login button
         
@@ -324,9 +326,16 @@ class TableViewControllerOne: UITableViewController {
         
         
         
+         loginButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+        
         
     }
     
+    @objc func buttonAction(sender: UIButton!) {
+      print("Button tapped")
+    
+    }
     
     // MARK: - Table view data source
     
@@ -346,11 +355,14 @@ class TableViewControllerOne: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellOne", for: indexPath) as! TableViewCellOne
         
         
         
+        
         cell.selectionStyle = .none
+        
         return cell
     }
     

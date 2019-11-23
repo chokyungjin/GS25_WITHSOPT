@@ -25,6 +25,9 @@ class TabBarViewController: UITabBarController {
         
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageVC") as? MyPageViewController {
             vc.modalPresentationStyle = .fullScreen
+            
+         //   self.show(UIViewController, sender: <#T##Any?#>)
+        
             self.present(vc, animated: true, completion: nil)   // 식별자 가르키는 곳으로 이동
         }
     }

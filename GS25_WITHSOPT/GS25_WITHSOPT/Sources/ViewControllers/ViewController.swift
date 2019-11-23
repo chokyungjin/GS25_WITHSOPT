@@ -25,6 +25,8 @@ class ViewController: ButtonBarPagerTabStripViewController {
   
             let navigationHeight = UIApplication.shared.statusBarFrame.height
                                           + self.navigationController!.navigationBar.frame.height
+        
+        
             buttonBarView.frame = CGRect(x: 0, y: navigationHeight ,width: self.view.bounds.width,height: 50)
 
           
@@ -51,6 +53,8 @@ class ViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.buttonBarMinimumLineSpacing = 1
         self.settings.style.buttonBarItemTitleColor = .niceBlue
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
+        
+        
       //  settings.style.buttonBarLeftContentInset = 200
       //  settings.style.buttonBarRightContentInset = 30
       //  settings.style.buttonBarItemLeftRightMargin = 0
