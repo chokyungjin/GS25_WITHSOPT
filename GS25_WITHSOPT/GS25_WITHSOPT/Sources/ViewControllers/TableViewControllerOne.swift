@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import Kingfisher
 
 class TableViewControllerOne: UITableViewController {
     
@@ -106,9 +107,15 @@ class TableViewControllerOne: UITableViewController {
         
         
         // qr code Image
-        let qrImage = UIImage(named: "20191115120619")
-        let qrImageView = UIImageView(image: qrImage!)
-        //        qrImageView.frame = CGRect(x:84, y:135, width: 192, height: 181)
+       // let qrImage = UIImage(named: "20191115120619")
+        let url = URL(string: "http://files.itworld.co.kr/archive/image/2016/10/qr-code-give-me-up-100725354-medium.jpg")
+        
+       // let qrImageView = UIImageView(image: qrImage!)
+        let qrImageView = UIImageView()
+        qrImageView.kf.setImage(with: url)
+    
+       // qrImageView.frame = CGRect(x:84, y:135, width: 192, height: 181)
+         
         self.view.addSubview(qrImageView)
         
         qrImageView.translatesAutoresizingMaskIntoConstraints = false

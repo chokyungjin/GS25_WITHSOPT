@@ -9,40 +9,39 @@
 import UIKit
 import XLPagerTabStrip
 
-class ViewController: ButtonBarPagerTabStripViewController {
 
+class ViewController: ButtonBarPagerTabStripViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadDesign()
         
-                
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-  
-            let navigationHeight = UIApplication.shared.statusBarFrame.height
-                                          + self.navigationController!.navigationBar.frame.height
+        super.viewDidLayoutSubviews()
         
+        let navigationHeight = UIApplication.shared.statusBarFrame.height
+            + self.navigationController!.navigationBar.frame.height
         
-            buttonBarView.frame = CGRect(x: 0, y: navigationHeight ,width: self.view.bounds.width,height: 50)
-
-          
+        buttonBarView.frame = CGRect(x: 0, y: navigationHeight ,width: self.view.bounds.width,height: 50)
+        
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+      //  Check()
+    }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TableOne")
         let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TableTwo")
         
         
-      return [child_1,child_2]
+        return [child_1,child_2]
     }
     
-
+    
     func loadDesign() {
         
         self.settings.style.selectedBarHeight = 1.0
@@ -54,23 +53,15 @@ class ViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.buttonBarItemTitleColor = .niceBlue
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
         
-        
-      //  settings.style.buttonBarLeftContentInset = 200
-      //  settings.style.buttonBarRightContentInset = 30
-      //  settings.style.buttonBarItemLeftRightMargin = 0
-        
-       
-        
-        
         // iPhone X..
         if (UIDevice().userInterfaceIdiom == .phone) && (UIScreen.main.nativeBounds.height == 2436) {
             containerView.frame = CGRect(x: 0, y: buttonBarView.frame.height + 50 , width: 375, height: view.frame.height)
-
+            
         }
-        // iPhone 8..
+            // iPhone 8..
         else {
             containerView.frame = CGRect(x: 0, y: buttonBarView.frame.height , width: 375, height: view.frame.height)
-
+            
         }
         
         
@@ -79,8 +70,13 @@ class ViewController: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = UIColor.black
             newCell?.label.textColor = .niceBlue
         }
-
+        
     }
+    
+   
+    
+    
+    
     
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		34D95285A7B3C45455B2C20D /* Pods_GS25_WITHSOPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67749BB494DA4780BFF35C12 /* Pods_GS25_WITHSOPT.framework */; };
+		3947ABCF238B956200473884 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947ABCE238B956200473884 /* DataManager.swift */; };
+		3947ABD1238BAE6F00473884 /* StorageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947ABD0238BAE6F00473884 /* StorageCollectionViewCell.swift */; };
 		397E277A2381A6D300EA90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E27792381A6D300EA90C0 /* AppDelegate.swift */; };
 		397E277C2381A6D300EA90C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E277B2381A6D300EA90C0 /* SceneDelegate.swift */; };
 		397E277E2381A6D300EA90C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E277D2381A6D300EA90C0 /* ViewController.swift */; };
@@ -18,6 +20,9 @@
 		397E27972381ACB700EA90C0 /* TableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E27962381ACB700EA90C0 /* TableViewCellOne.swift */; };
 		397E27992381AE6400EA90C0 /* TableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E27982381AE6400EA90C0 /* TableViewCellTwo.swift */; };
 		397E279D2381AE9600EA90C0 /* TableViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E279C2381AE9600EA90C0 /* TableViewControllerTwo.swift */; };
+		3982310D2389254F002826AC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982310C2389254F002826AC /* NetworkResult.swift */; };
+		3982310F2389268A002826AC /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982310E2389268A002826AC /* ResponseString.swift */; };
+		39C06437238B7E5F00539A45 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C06436238B7E5F00539A45 /* StorageViewController.swift */; };
 		39D4130A2381BED900A383CE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D413092381BED900A383CE /* UIColor+Additions.swift */; };
 		39DE73EB2382514E0017D333 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE73EA2382514E0017D333 /* TabbarViewController.swift */; };
 		B6CE0F86238296EF00940039 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE0F85238296EF00940039 /* MyPageViewController.swift */; };
@@ -26,6 +31,8 @@
 /* Begin PBXFileReference section */
 		08C6A0959E86839F68F17F5B /* Pods-GS25_WITHSOPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS25_WITHSOPT.release.xcconfig"; path = "Target Support Files/Pods-GS25_WITHSOPT/Pods-GS25_WITHSOPT.release.xcconfig"; sourceTree = "<group>"; };
 		313D5260BC0717C240B63F78 /* Pods-GS25_WITHSOPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS25_WITHSOPT.debug.xcconfig"; path = "Target Support Files/Pods-GS25_WITHSOPT/Pods-GS25_WITHSOPT.debug.xcconfig"; sourceTree = "<group>"; };
+		3947ABCE238B956200473884 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3947ABD0238BAE6F00473884 /* StorageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCollectionViewCell.swift; sourceTree = "<group>"; };
 		397E27762381A6D300EA90C0 /* GS25_WITHSOPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GS25_WITHSOPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397E27792381A6D300EA90C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397E277B2381A6D300EA90C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,9 @@
 		397E27962381ACB700EA90C0 /* TableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOne.swift; sourceTree = "<group>"; };
 		397E27982381AE6400EA90C0 /* TableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTwo.swift; sourceTree = "<group>"; };
 		397E279C2381AE9600EA90C0 /* TableViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTwo.swift; sourceTree = "<group>"; };
+		3982310C2389254F002826AC /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		3982310E2389268A002826AC /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		39C06436238B7E5F00539A45 /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		39D413092381BED900A383CE /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		39DE73EA2382514E0017D333 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		67749BB494DA4780BFF35C12 /* Pods_GS25_WITHSOPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS25_WITHSOPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +119,7 @@
 		397E278E2381A77300EA90C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3982310E2389268A002826AC /* ResponseString.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 				397E279C2381AE9600EA90C0 /* TableViewControllerTwo.swift */,
 				39DE73EA2382514E0017D333 /* TabbarViewController.swift */,
 				B6CE0F85238296EF00940039 /* MyPageViewController.swift */,
+				39C06436238B7E5F00539A45 /* StorageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 		397E27912381A78B00EA90C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3982310B23892517002826AC /* APIServices */,
 				397E27822381A6D400EA90C0 /* Assets.xcassets */,
 				397E27922381A79C00EA90C0 /* Storyboards */,
 			);
@@ -156,8 +169,18 @@
 			children = (
 				397E27962381ACB700EA90C0 /* TableViewCellOne.swift */,
 				397E27982381AE6400EA90C0 /* TableViewCellTwo.swift */,
+				3947ABD0238BAE6F00473884 /* StorageCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3982310B23892517002826AC /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				3982310C2389254F002826AC /* NetworkResult.swift */,
+				3947ABCE238B956200473884 /* DataManager.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 		8E1F3E960734E45601F0C35F /* Frameworks */ = {
@@ -284,15 +307,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				397E279D2381AE9600EA90C0 /* TableViewControllerTwo.swift in Sources */,
+				3947ABCF238B956200473884 /* DataManager.swift in Sources */,
 				39D4130A2381BED900A383CE /* UIColor+Additions.swift in Sources */,
+				3982310D2389254F002826AC /* NetworkResult.swift in Sources */,
 				397E27942381AC9700EA90C0 /* TableViewControllerOne.swift in Sources */,
 				397E277E2381A6D300EA90C0 /* ViewController.swift in Sources */,
 				397E277A2381A6D300EA90C0 /* AppDelegate.swift in Sources */,
 				B6CE0F86238296EF00940039 /* MyPageViewController.swift in Sources */,
 				397E27972381ACB700EA90C0 /* TableViewCellOne.swift in Sources */,
 				397E27992381AE6400EA90C0 /* TableViewCellTwo.swift in Sources */,
+				39C06437238B7E5F00539A45 /* StorageViewController.swift in Sources */,
+				3982310F2389268A002826AC /* ResponseString.swift in Sources */,
 				397E277C2381A6D300EA90C0 /* SceneDelegate.swift in Sources */,
 				39DE73EB2382514E0017D333 /* TabbarViewController.swift in Sources */,
+				3947ABD1238BAE6F00473884 /* StorageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
