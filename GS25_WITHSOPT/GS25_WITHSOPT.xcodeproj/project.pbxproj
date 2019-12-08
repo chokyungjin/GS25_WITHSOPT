@@ -26,6 +26,8 @@
 		39D4130A2381BED900A383CE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D413092381BED900A383CE /* UIColor+Additions.swift */; };
 		39DE73EB2382514E0017D333 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE73EA2382514E0017D333 /* TabbarViewController.swift */; };
 		B6CE0F86238296EF00940039 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE0F85238296EF00940039 /* MyPageViewController.swift */; };
+		B6E312CA2395778400788E22 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E312C92395778400788E22 /* OrderViewController.swift */; };
+		B6E312CE239577B200788E22 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E312CD239577B200788E22 /* DataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		39DE73EA2382514E0017D333 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		67749BB494DA4780BFF35C12 /* Pods_GS25_WITHSOPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS25_WITHSOPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CE0F85238296EF00940039 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		B6E312C92395778400788E22 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		B6E312CD239577B200788E22 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3982310E2389268A002826AC /* ResponseString.swift */,
+				B6E312CD239577B200788E22 /* DataTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				39DE73EA2382514E0017D333 /* TabbarViewController.swift */,
 				B6CE0F85238296EF00940039 /* MyPageViewController.swift */,
 				39C06436238B7E5F00539A45 /* StorageViewController.swift */,
+				B6E312C92395778400788E22 /* OrderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -320,7 +326,9 @@
 				3982310F2389268A002826AC /* ResponseString.swift in Sources */,
 				397E277C2381A6D300EA90C0 /* SceneDelegate.swift in Sources */,
 				39DE73EB2382514E0017D333 /* TabbarViewController.swift in Sources */,
+				B6E312CE239577B200788E22 /* DataTableViewCell.swift in Sources */,
 				3947ABD1238BAE6F00473884 /* StorageCollectionViewCell.swift in Sources */,
+				B6E312CA2395778400788E22 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
